@@ -1,0 +1,22 @@
+<p *ngIf="!userlist"><em>Loading...</em></p>
+<table style="background-color:white;" class='table' *ngIf="userlist">
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>User Name</th>
+      <th>User Email</th>
+      <th>User Type</th>
+      <th>User Address</th>
+      <th>User Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userlist">
+      <td>{{ user.uid }}</td>
+      <td>{{ user.uName }}</td>
+      <td>{{ user.uEmail }}</td>
+      <td>{{ user.uType }}</td>
+      <td>{{ user.uAddress }}</td>
+      <td>{{ user.uContact }}</td>
+</tbody>
+</table>

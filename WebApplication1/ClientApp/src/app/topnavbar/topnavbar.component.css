@@ -1,0 +1,38 @@
+.center {
+  margin: 0 auto; 
+}
+.centercard {
+  display: flex;
+  justify-content: center;
+}
+.centcard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btntheme
+{
+    background-color:white;
+}
+.gap {
+  padding: 0 14px;
+}
+.onright {
+  flex: 1 1 auto;
+}
+.bgcolorandfix {
+  background-color: white;
+  color: cornflowerblue;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.margintop {
+  margin-top: 60px;
+  position:center;
+}
+.btnstyle {
+ background-color:#012040;
+ color:white;
+ font-family:'Roboto';
+}

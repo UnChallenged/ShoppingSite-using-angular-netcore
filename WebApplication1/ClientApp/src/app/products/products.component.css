@@ -1,0 +1,11 @@
+.cardheader {
+  margin-right:40px;
+}
+.cardcontent {
+  text-align: center;
+}
+.fontstyle {
+  font-family: 'Roboto', sans-serif;
+  font-size: larger;
+  font-weight: bold;
+}

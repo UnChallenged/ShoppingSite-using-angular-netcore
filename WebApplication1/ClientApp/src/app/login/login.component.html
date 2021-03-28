@@ -1,0 +1,37 @@
+<div class="cardcenter">
+  <mat-card class="cardwidth">
+    <mat-card-header class="cardheader">
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <form [formGroup]="LoginForm">
+      <mat-card-content class="cardcontent">
+        <div>
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="UEmail">
+            <mat-error *ngIf="!email.hasError('required')&&email.hasError('email')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="email.hasError('required')">
+              Email can not be empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="UPassword">
+            <mat-error *ngIf="!password.hasError('required')&&password.hasError('minlength')">
+              Password can not be less than 5 character
+            </mat-error>
+            <mat-error *ngIf="password.hasError('required')">
+              Password can not be empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <button mat-button style="background-color:lightgrey;" (click)="onSubmit()">Login</button>
+      </mat-card-content>
+    </form>
+  </mat-card>
+</div>

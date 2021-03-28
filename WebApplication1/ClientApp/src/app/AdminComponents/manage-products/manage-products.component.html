@@ -1,0 +1,26 @@
+<p *ngIf="!prodlist"><em>Loading...</em></p>
+<table class='table' *ngIf="prodlist">
+  <thead>
+    <tr>
+      <th>Product ID</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+      <th>Product Quantity</th>
+      <th>Category ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prod of prodlist">
+      <td>{{ prod.productId }}</td>
+      <td>{{ prod.productName }}</td>
+      <td>{{ prod.productPrice }}</td>
+      <td>{{ prod.productQuantity }}</td>
+      <td>{{ prod.catId }}</td>
+      <td>
+        <a [routerLink]="" (click)="delete(prod.productId)">Delete</a> |
+        <a [routerLink]="['/product/', prod.productId]">View</a> |
+        <a [routerLink]="['/admin/product/edit/', prod.productId]">Edit</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

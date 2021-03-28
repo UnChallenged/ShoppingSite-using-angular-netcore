@@ -1,0 +1,57 @@
+<div style="margin-top:60px" class="bg-dark text-white p-2">
+  <div class="navbar-brand">Khalis Store</div>
+</div>
+<div class="m-1">
+  <h2 class="text-center">Your Cart</h2>
+  <table class="table table-bordered table-striped p-1">
+    <thead>
+      <tr>
+        <th>Quantity</th>
+        <th>Product</th>
+        <th class="text-right">Price</th>
+        <th class="text-right">Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="cart.selections.length == 0">
+        <td colspan="4" class="text-xs-center">
+          Your cart is empty
+        </td>
+      </tr>
+      <tr *ngFor="let sel of cart.selections">
+        <td>
+          <input type="number" min="1" oninput="validity.valid||(value='1');" class="form-control-sm"
+                 style="width:5em" [(ngModel)]="sel.productQuantity" />
+        </td>
+        <td>{{sel.productName}}</td>
+        <td class="text-right">
+          {{sel.productPrice | currency:"PKR ":"symbol":"2.2-2"}}
+        </td>
+        <td class="text-right">
+          {{(sel.productQuantity * sel.productPrice) | currency:"PKR ":"symbol":"2.2-2" }}
+        </td>
+        <td class="text-center">
+          <button class="btn btn-sm btn-danger"
+                  (click)="cart.updateQuantity(sel.productId, 0)">
+            Remove
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3" class="text-right">Total:</td>
+        <td class="text-right">
+          {{cart.totalPrice | currency:"PKR":"symbol":"2.2-2"}}
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+<div class="text-center">
+  <button class="btn btn-primary m-1" routerLink="/products">Continue Shopping</button>
+  <button class="btn btn-secondary m-1" 
+          [disabled]="cart.selections.length == 0" routerLink="/checkout">
+    Checkout
+  </button>
+</div>

@@ -1,0 +1,16 @@
+<div class="text-right p-1" style="color:black;font-family:'Roboto'">
+  <small *ngIf="itemCount > 0; else empty">
+    {{ totalPrice | currency:"PKR ":"symbol" }}
+  </small>
+  <button class="btn btn-sm ml-1"
+          [disabled]="itemCount == 0"
+          routerLink="/cart">
+    <!-- <i class="text-black fa fa-shopping-cart"></i>-->
+    <mat-icon matBadge="{{ itemCount }}" matBadgeColor="warn">shopping_basket</mat-icon>
+  </button>
+</div>
+<ng-template #empty>
+  <small class="text-muted">
+    (cart is empty)
+  </small>
+</ng-template>

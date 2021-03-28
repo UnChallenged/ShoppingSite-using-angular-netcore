@@ -1,0 +1,14 @@
+<mat-drawer-container class="tp-container">
+  <mat-drawer mode="side" opened >
+    <mat-list role="list" >
+      <mat-list-item role="listitem"><button mat-raised-button (click)="manageorders()">Manage Orders</button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-raised-button (click)="addproduct()">Add Products</button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-raised-button (click)="manageproduct()">Manage Products</button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-raised-button (click)="manageusers()">Manage Users</button></mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+

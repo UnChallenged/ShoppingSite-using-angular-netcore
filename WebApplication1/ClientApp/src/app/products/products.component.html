@@ -1,0 +1,48 @@
+<mat-grid-list cols="4" rowHeight="530px" style="margin-top:60px">
+  <mat-grid-tile *ngFor="let tile of prodlist">
+    <mat-card>
+      <mat-card-header class="cardheader">
+        <img src="https://drive.google.com/uc?export=view&id={{tile.productImage}}" style="width:230px;height:320px;" />
+      </mat-card-header>
+      <mat-card-content class="cardcontent">
+        <br />
+        <p class="fontstyle">{{tile.productName}}</p>
+        <h6>{{"Price : "+ tile.productPrice }}</h6>
+        <h6> {{"Available Quantity: "+tile.productQuantity}}</h6>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="Addcart(tile)">
+          <mat-icon aria-hidden="false">add</mat-icon>
+          Add to cart
+        </button>
+        <button mat-raised-button [routerLink]="['/product/', tile.productId]">More Info</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<!--<p *ngIf="!prodlist"><em>Loading...</em></p>
+<table class='table' *ngIf="prodlist">
+  <thead>
+    <tr>
+      <th>Product ID</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+      <th>Product Quantity</th>
+      <th>Category ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prod of prodlist">
+      <td>{{ prod.productId }}</td>
+      <td>{{ prod.productName }}</td>
+      <td>{{ prod.productPrice }}</td>
+      <td>{{ prod.productQuantity }}</td>
+      <td>{{ prod.catId }}</td>
+      <td>
+        <button mat-button (click)="Addcart(prod)">Add To Cart</button> |
+        <a >View</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+  -->

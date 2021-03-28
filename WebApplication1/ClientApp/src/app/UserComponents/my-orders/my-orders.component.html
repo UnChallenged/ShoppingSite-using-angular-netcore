@@ -1,0 +1,40 @@
+<p *ngIf="!userorderlist"><em>Loading...</em></p>
+<table style="background-color:white;" class='table' *ngIf="userorderlist">
+  <thead>
+    <tr>
+      <th>Order ID</th>
+      <th>Order Date</th>
+      <th>Order Price</th>
+      <th>Order Status</th>
+      <th>Order Items</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of userorderlist">
+      <td>{{ order.orderId }}</td>
+      <td>{{ order.orderDate }}</td>
+      <td>{{ order.orderPrice }}</td>
+      <td>{{ order.orderStatus }}</td>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Order Items
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+    <tr>
+      <th>Product Name</th>
+      <th>Product Quantity</th>
+      <th>Product Price</th>
+    </tr>
+    <tr *ngFor="let item of order['orderItems']">
+      <td>{{ item.productName }}</td>
+      <td>{{ item.quantityValue }}</td>
+      <td>{{ item.productPrice }}</td>
+    </tr>
+    </mat-expansion-panel>
+    </mat-accordion>
+    </tr>
+  </tbody>
+</table>

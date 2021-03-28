@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+}
+.cardwidth {
+  max-width: 500px;
+}
+.cardcontent {
+  text-align: center;
+}
+
+.cardheader {
+  display: flex;
+  justify-content: center;
+}
+
+.cardcenter {
+  margin-top: 30px;
+  margin-left: 30%;
+}
+.actioncenter {
+  text-align: center;
+}
+.iconcolor{
+    color:green;
+}

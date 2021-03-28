@@ -1,0 +1,83 @@
+<div class="cardcenter">
+  <mat-card class="cardwidth">
+    <mat-card-header class="cardheader">
+      <mat-card-title>Signup</mat-card-title>
+    </mat-card-header>
+    <form [formGroup]="SignupForm">
+      <mat-card-content class="cardcontent">
+        <div>
+          <mat-form-field>
+            <mat-label>Full Name</mat-label>
+            <input matInput formControlName="UName">
+            <mat-error *ngIf="name.hasError('required')">
+              Name can not be empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="UAddress">
+            <mat-error *ngIf="address.hasError('required')">
+              Address can not be empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Contact Number</mat-label>
+            <input type="tel" matInput formControlName="UContact" placeholder="Ex. 03001234567">
+            <mat-error *ngIf="number.hasError('required')">
+              Contact Number can not be empty
+            </mat-error>
+            <mat-error *ngIf="!number.hasError('required')&&number.hasError('minlength')">
+              Please enter a valid Contact Number
+            </mat-error>
+            <mat-error *ngIf="!number.hasError('required')&&!number.hasError('minlength')&&number.hasError('maxlength')">
+              Please enter a valid Contact Number
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="UEmail">
+            <mat-error *ngIf="!email.hasError('required')&&email.hasError('email')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="email.hasError('required')">
+              Email can not be empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="UPassword" >
+            <mat-error *ngIf="!password.hasError('required')&&password.hasError('minlength')">
+              Password can not be less than 5 character
+            </mat-error>
+            <mat-error *ngIf="password.hasError('required')">
+              Password can not be empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field>
+            <mat-label>Confirm Password</mat-label>
+            <input matInput formControlName="confirmpassFormControl" type="password">
+            <mat-error *ngIf="!confirmpassword.hasError('required')&&confirmpassword.hasError('ConfirmPassword')">
+              Password does not matched
+            </mat-error>
+            <mat-error *ngIf="confirmpassword.hasError('required')">
+             Confirmed Password can not be empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <button mat-button style="background-color:lightgrey;" (click)="onsubmit()">Signup</button>
+      </mat-card-content>
+    </form>
+  </mat-card>
+</div>

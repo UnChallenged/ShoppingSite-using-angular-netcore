@@ -1,0 +1,33 @@
+<div class="cardcenter">
+  <mat-card class="cardwidth">
+    <mat-card-header class="cardheader" >
+      <mat-card-title *ngIf="myproduct">{{myproduct.productName}}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div style="display: flex;">
+        <div style="flex:0 0 65%;">
+          <img src="https://drive.google.com/uc?export=view&id=17KiZqEmOYyyJgN9qAhRVeNuUXxBaOagC" style="    width: 250px;
+    height: 360px;" />
+        </div>
+        <div style="flex:1; margin-top:60px;">
+          <h5 *ngIf="myproduct">Price : {{myproduct.productPrice}}</h5>
+          <br />
+          <button mat-mini-fab style="background-color: #cfd8dc;" (click)="decrmntbtn()">
+            <mat-icon>exposure_neg_1</mat-icon>
+          </button>
+          <input class="inputclass" [(ngModel)]="quantity">
+          <button mat-mini-fab style="background-color:#cfd8dc;" (click)="incrmntbtn()">
+            <mat-icon>plus_one</mat-icon>
+          </button>
+          <br />
+          <button mat-raised-button style="margin-top:20px" (click)="addtocart()"><mat-icon aria-hidden="false">add</mat-icon>Add to cart</button>
+          <br />
+          <br />
+          <h5>Description</h5>
+        </div>
+      </div>
+    </mat-card-content>
+
+  </mat-card>
+</div>

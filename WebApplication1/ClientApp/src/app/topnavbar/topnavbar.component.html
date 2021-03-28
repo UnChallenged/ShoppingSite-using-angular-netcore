@@ -1,0 +1,33 @@
+<mat-toolbar class="bgcolorandfix">
+  <div class="center">
+
+    <span class="gap">
+      <button mat-flat-button routerLink="">Main Page</button>
+    </span>
+
+    <span class="gap">
+      <button mat-flat-button routerLink="/products">Products</button>
+    </span>
+    <span class="gap">
+      <button mat-flat-button>Blog</button>
+    </span>
+  </div>
+  <span class="gap">
+    <button mat-flat-button *ngIf="userData.isLoggedIn && userData.role==userRole.Admin" routerLink="/admin">Admin Dashboard</button>
+  </span>
+  <span class="gap">
+    <button mat-flat-button *ngIf="userData.isLoggedIn && userData.role==userRole.Customer" routerLink="/user">User Dashboard</button>
+  </span>
+  <span class="gap">
+    <app-cart-summary></app-cart-summary>
+  </span>
+  <span class="gap">
+    <button class="btnstyle" mat-flat-button *ngIf="!userData.isLoggedIn" [routerLink]='["/login"]'>Login</button>
+  </span>
+  <span>
+    <button class="btnstyle" mat-flat-button *ngIf="!userData.isLoggedIn" [routerLink]='["/signup"]'>Sign up</button>
+  </span>
+  <span class="gap">
+    <button mat-flat-button *ngIf="userData.isLoggedIn" (click)=logout() [routerLink]=''>Logout</button>
+  </span>
+</mat-toolbar>

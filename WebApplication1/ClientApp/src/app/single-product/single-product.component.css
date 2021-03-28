@@ -1,0 +1,16 @@
+.cardcenter {
+  margin-top: 80px;
+  margin-left: 30%;
+}
+.cardwidth {
+  max-width: 700px;
+}
+.cardheader {
+  display: flex;
+  justify-content: center;
+}
+.inputclass {
+  width:20px;
+  border:0;
+  text-align:center;
+}

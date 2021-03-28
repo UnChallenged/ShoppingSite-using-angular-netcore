@@ -1,0 +1,50 @@
+<div *ngIf="checkoutpage" style="margin-top:60px;" class="cardcenter">
+  <mat-card class="cardwidth">
+    <mat-card-header class="cardheader">
+      <mat-card-title>Confirmation</mat-card-title>
+    </mat-card-header>
+    <mat-card-content >
+      <table mat-table [dataSource]="getproduct()" multiTemplateDataRows class="mat-elevation-z8">
+        <ng-container matColumnDef="productName">
+          <th mat-header-cell *matHeaderCellDef> Product </th>
+          <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </ng-container>
+        <ng-container matColumnDef="productQuantity">
+          <th mat-header-cell *matHeaderCellDef> Product Quantity </th>
+          <td mat-cell *matCellDef="let element"> {{element.quantityValue}} </td>
+
+        </ng-container>
+        <ng-container matColumnDef="cost">
+          <th mat-header-cell *matHeaderCellDef> Cost </th>
+          <td mat-cell *matCellDef="let element"> {{(element.quantityValue * element.productPrice) | currency:"PKR ":"symbol":"2.2-2" }} </td>
+
+        </ng-container>
+
+      </table>
+      <br />
+      <h4>Subtotal : {{cart.totalPrice | currency:"PKR ":"symbol":"2.2-2"}} </h4>
+      <h2>{{orderid}}</h2>
+    </mat-card-content>
+    <mat-card-actions class="actioncenter">
+      <button mat-raised-button routerLink="/confirmed">Confirm</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div *ngIf="confirmedpage" style="margin-top:60px;" class="cardcenter">
+  <mat-card class="cardwidth">
+    <mat-card-header class="cardheader">
+      <mat-card-title>Congratulation</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="cardcontent">
+      <p>#{{confirmedOrderid}} Your Order has been placed<mat-icon class="iconcolor">check_circle_outline</mat-icon></p>
+
+    </mat-card-content>
+    <mat-card-actions class="actioncenter">
+      <button mat-raised-button routerLink="/products">Go to Store </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
