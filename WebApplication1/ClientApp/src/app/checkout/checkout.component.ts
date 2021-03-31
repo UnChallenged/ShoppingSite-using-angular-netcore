@@ -46,6 +46,7 @@ export class CheckoutComponent implements OnInit {
         this.userData = data;
         if (!this.userData.isLoggedIn) {
           this.router.navigate(['/login']);
+          console.log('test');
         }
     });
 
