@@ -46,10 +46,10 @@ export class SingleProductComponent implements OnInit {
     this.cart.addProductfromsinglepage(product);
   }
   incrmntbtn() {
-    this.quantity = this.quantity + 1;
+    this.quantity = Number(this.quantity) + 1;
   }
   decrmntbtn() {
-    this.quantity = this.quantity - 1;
+    this.quantity = Number(this.quantity) - 1;
     if (this.quantity < 1) { this.quantity=1 }
   }
 }
