@@ -43,7 +43,10 @@ export class CheckoutComponent implements OnInit {
     this.userDataSubscription = this.authService.userData
       .asObservable()
       .subscribe(data => {
-      this.userData = data;
+        this.userData = data;
+        if (!this.userData.isLoggedIn) {
+          this.router.navigate(['/login']);
+        }
     });
 
   }
