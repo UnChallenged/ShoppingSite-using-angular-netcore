@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MainService } from './mytestservice.service';
+import { MainService } from './MainService.service';
 
 import { Cartproduct } from '../model-ts/cartproduct';
 

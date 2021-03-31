@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MainService } from '../../Services/mytestservice.service';
+import { MainService } from '../../Services/MainService.service';
 import { Order } from '../../model-ts/order';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SignupUsers } from '../../model-ts/SignupUsers';

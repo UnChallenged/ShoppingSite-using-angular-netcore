@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MainService } from '../Services/mytestservice.service';
+import { MainService } from '../Services/MainService.service';
 import { HttpClient } from '@angular/common/http';
 import { CartService } from '../Services/cartservice.service';
 import { Cartproduct } from '../model-ts/cartproduct';

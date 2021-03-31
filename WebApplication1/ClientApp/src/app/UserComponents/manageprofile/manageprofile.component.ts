@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { MainService } from '../../Services/mytestservice.service';
+import { MainService } from '../../Services/MainService.service';
 import { ConfirmPasswordValidator } from '../../../assets/confirm-password.validator';
 import { AuthService } from '../../Services/auth.service';
 import { UserRole } from '../../model-ts/roles';

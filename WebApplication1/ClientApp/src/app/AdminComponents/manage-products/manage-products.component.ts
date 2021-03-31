@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { MainService } from '../../Services/mytestservice.service';
+import { MainService } from '../../Services/MainService.service';
 
 @Component({
   selector: 'app-manage-products',

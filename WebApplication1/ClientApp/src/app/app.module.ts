@@ -31,7 +31,7 @@ import { ManageUsersComponent } from './AdminComponents/manage-users/manage-user
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { ManageprofileComponent } from './UserComponents/manageprofile/manageprofile.component';
 import { MyOrdersComponent } from './UserComponents/my-orders/my-orders.component';
-import { MainService } from './Services/mytestservice.service';
+import { MainService } from './Services/MainService.service';
 import { ProductsComponent } from './products/products.component';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatTableModule } from '@angular/material/table';

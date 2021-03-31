@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { ConfirmPasswordValidator } from '../../assets/confirm-password.validator';
-import { MainService } from '../Services/mytestservice.service';
+import { MainService } from '../Services/MainService.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';

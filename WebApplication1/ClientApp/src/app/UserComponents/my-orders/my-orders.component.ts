@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from '../../model-ts/order';
-import { MainService } from '../../Services/mytestservice.service';
+import { MainService } from '../../Services/MainService.service';
 import { AuthService } from '../../Services/auth.service';
 import { User } from '../../model-ts/User';
 import { UserRole } from '../../model-ts/roles';

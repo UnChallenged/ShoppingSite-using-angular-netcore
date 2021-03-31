@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../Services/cartservice.service';
-import { MainService } from '../Services/mytestservice.service';
+import { MainService } from '../Services/MainService.service';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { AuthService } from '../Services/auth.service';
 import { User } from '../model-ts/User';
@@ -20,11 +20,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CheckoutComponent implements OnInit {
 
   confirmedOrderid: any;
-
   checkoutpage = true;
   confirmedpage = false;
-
-
   orderdata: FormGroup;
   userData = new User();
   date = new Date();
@@ -34,11 +31,19 @@ export class CheckoutComponent implements OnInit {
   displayedColumns: string[] = ['productName', 'productQuantity', 'cost'];
 
 
-  constructor(public router: Router, public activeRoutedService: ActivatedRoute, public datepipe: DatePipe, public cart: CartService, public postservice: MainService, private fb: FormBuilder, private authService: AuthService) {
-    this.userDataSubscription = this.authService.userData.asObservable().subscribe(data => {
+  constructor(
+    public router: Router,
+    public activeRoutedService: ActivatedRoute,
+    public datepipe: DatePipe,
+    public cart: CartService,
+    public postservice: MainService,
+    private fb: FormBuilder,
+    private authService: AuthService
+  ) {
+    this.userDataSubscription = this.authService.userData
+      .asObservable()
+      .subscribe(data => {
       this.userData = data;
-
-
     });
 
   }
@@ -50,7 +55,6 @@ export class CheckoutComponent implements OnInit {
       uid: this.userData.Uid,
       orderdate: this.date.getDate(),
       orderstatus: ['pending']
-
 
     });
 

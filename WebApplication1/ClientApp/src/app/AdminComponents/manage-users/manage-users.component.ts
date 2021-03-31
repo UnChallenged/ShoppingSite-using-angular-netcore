@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SignupUsers } from '../../model-ts/SignupUsers';
-import { MainService } from '../../Services/mytestservice.service';
+import { MainService } from '../../Services/MainService.service';
 
 @Component({
   selector: 'app-manage-users',
