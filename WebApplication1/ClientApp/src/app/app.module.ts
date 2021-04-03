@@ -37,6 +37,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatTableModule } from '@angular/material/table';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { TableModule } from 'primeng/table';
 
 import { CartSummaryComponent } from './cart-summary/cart-summary.component';
 import { CartDetailsComponent } from './cart-details/cart-details.component';
@@ -100,6 +101,7 @@ import { DialogOverviewUserinfoComponent } from './AdminComponents/dialog-overvi
     MatListModule,
     MatSidenavModule,
     MatButtonModule,
+    TableModule,
     RouterModule.forRoot([
     { path: '', component: MainHomeComponent, pathMatch: 'full' },
     { path: 'admin', component: AdminDashboardComponent,

@@ -13,7 +13,9 @@ import { DialogOverviewUserinfoComponent } from '../dialog-overview-userinfo/dia
   styleUrls: ['./manage-orders.component.css']
 })
 export class ManageOrdersComponent implements OnInit {
+    first = 0;
 
+    rows = 10;
   panelOpenState = false;
   public orderlist: Order[] = [];
   public userinfo: SignupUsers;
@@ -57,6 +59,24 @@ export class ManageOrdersComponent implements OnInit {
       console.log('The dialog was closed');
     });
   }
+  next() {
+    this.first = this.first + this.rows;
+  }
 
+  prev() {
+    this.first = this.first - this.rows;
+  }
+
+  reset() {
+    this.first = 0;
+  }
+
+  isLastPage(): boolean {
+    return this.orderlist ? this.first === (this.orderlist.length - this.rows) : true;
+  }
+
+  isFirstPage(): boolean {
+    return this.orderlist ? this.first === 0 : true;
+  }
 }
 
