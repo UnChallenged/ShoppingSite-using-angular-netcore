@@ -18,11 +18,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { NavMenuComponent } from './main/nav-menu/nav-menu.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TopnavbarComponent } from './topnavbar/topnavbar.component';
-import { MainHomeComponent } from './main-home/main-home.component';
+import { TopnavbarComponent } from './main/topnavbar/topnavbar.component';
+import { MainHomeComponent } from './main/main-home/main-home.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AddproductsComponent } from './AdminComponents/addproducts/addproducts.component';
 import { ManageProductsComponent } from './AdminComponents/manage-products/manage-products.component';
@@ -32,7 +32,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { ManageprofileComponent } from './UserComponents/manageprofile/manageprofile.component';
 import { MyOrdersComponent } from './UserComponents/my-orders/my-orders.component';
 import { MainService } from './Services/MainService.service';
-import { ProductsComponent } from './products/products.component';
+import { ProductsComponent } from './main/products/products.component';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatTableModule } from '@angular/material/table';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -52,7 +52,7 @@ import { DatePipe } from '@angular/common';
 import { ConfirmedComponent } from './confirmed/confirmed.component';
 import { DirectaccessService } from './guard/directaccess.service';
 import { SingleProductComponent } from './single-product/single-product.component';
-import { SignupComponent } from './signup/signup.component';
+import { SignupComponent } from './main/signup/signup.component';
 import { DialogOverviewUserinfoComponent } from './AdminComponents/dialog-overview-userinfo/dialog-overview-userinfo.component';
 import { FooterComponent } from './main/footer/footer.component';
 

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MainService } from '../Services/MainService.service';
+import { MainService } from '../../Services/MainService.service';
 import { HttpClient } from '@angular/common/http';
-import { CartService } from '../Services/cartservice.service';
-import { Cartproduct } from '../model-ts/cartproduct';
+import { CartService } from '../../Services/cartservice.service';
+import { Cartproduct } from '../../model-ts/cartproduct';
 
 @Component({
   selector: 'app-products',
