@@ -54,6 +54,7 @@ import { DirectaccessService } from './guard/directaccess.service';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { SignupComponent } from './signup/signup.component';
 import { DialogOverviewUserinfoComponent } from './AdminComponents/dialog-overview-userinfo/dialog-overview-userinfo.component';
+import { FooterComponent } from './main/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { DialogOverviewUserinfoComponent } from './AdminComponents/dialog-overvi
     ConfirmedComponent,
     SingleProductComponent,
     SignupComponent,
-    DialogOverviewUserinfoComponent
+    DialogOverviewUserinfoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
