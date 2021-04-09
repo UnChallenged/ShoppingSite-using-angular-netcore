@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
-import { AuthService } from '../Services/auth.service';
-import { User } from '../model-ts/User';
-import { UserRole } from '../model-ts/roles';
+import { UserRole } from '../../model-ts/roles';
+import { User } from '../../model-ts/User';
+import { AuthService } from '../../Services/auth.service';
+
 
 @Component({
   selector: 'app-topnavbar',

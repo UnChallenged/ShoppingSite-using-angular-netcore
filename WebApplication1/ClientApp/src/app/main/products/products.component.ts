@@ -12,7 +12,7 @@ import { Cartproduct } from '../../model-ts/cartproduct';
 
 
 export class ProductsComponent implements OnInit {
-
+  breakpoint: number
 
 
   constructor(public http: HttpClient, private productservice: MainService, private cart:CartService) {
@@ -26,10 +26,31 @@ export class ProductsComponent implements OnInit {
    
   }
   ngOnInit(): void {
+    if (window.innerWidth <= 700) {
+      this.breakpoint = 1
+    }
+    else if (window.innerWidth <= 1100) {
+      this.breakpoint = 2
+    }
+    else {
+      this.breakpoint = 3
+    }
+/*this.breakpoint = (window.innerWidth <= 400) ? 1 : 3;*/
   }
 
   Addcart(product: Cartproduct) {
     this.cart.addProduct(product);
   }
-
+  onResize(event) {
+    if (event.target.innerWidth <= 700) {
+      this.breakpoint = 1
+    }
+    else if (event.target.innerWidth <= 1100) {
+      this.breakpoint = 2
+    }
+    else {
+      this.breakpoint = 3
+    }
+    //this.breakpoint = (event.target.innerWidth <= 400) ? 1 : 3;
+  }
 }

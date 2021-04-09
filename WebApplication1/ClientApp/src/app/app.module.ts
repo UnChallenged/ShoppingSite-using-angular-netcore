@@ -18,7 +18,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './main/nav-menu/nav-menu.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopnavbarComponent } from './main/topnavbar/topnavbar.component';
@@ -59,7 +58,6 @@ import { FooterComponent } from './main/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavMenuComponent,
     FetchDataComponent,
     TopnavbarComponent,
     MainHomeComponent,
