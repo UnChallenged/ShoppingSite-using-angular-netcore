@@ -14,6 +14,11 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  margin: -4px;
   justify-content: center;
+}
+.searchfield {
+  width: 200px;
+  margin-left:auto;
+  display:flex;
+  margin-right:90px;
 }

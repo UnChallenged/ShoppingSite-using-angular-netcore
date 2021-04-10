@@ -4,7 +4,12 @@
     <mat-chip>Category 2</mat-chip>
   </mat-chip-list>
 </div>
-
+<mat-form-field class="searchfield">
+  <input matInput type="text" [(ngModel)]="Searchvalue">
+  <button mat-button *ngIf="Searchvalue" matSuffix mat-icon-button aria-label="Clear" (click)="Searchvalue=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
 <mat-grid-list [cols]="breakpoint" (window:resize)="onResize($event)" rowHeight="530px" style="margin-top:30px">
   <mat-grid-tile *ngFor="let tile of prodlist">
     <mat-card>
