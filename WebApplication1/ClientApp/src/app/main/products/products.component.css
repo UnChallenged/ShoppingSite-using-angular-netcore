@@ -9,3 +9,11 @@
   font-size: larger;
   font-weight: bold;
 }
+.mat-chip-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: -4px;
+  justify-content: center;
+}

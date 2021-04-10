@@ -38,6 +38,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TableModule } from 'primeng/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatChipsModule} from '@angular/material/chips';
 
 import { CartSummaryComponent } from './cart-summary/cart-summary.component';
 import { CartDetailsComponent } from './cart-details/cart-details.component';
@@ -104,6 +105,7 @@ import { FooterComponent } from './main/footer/footer.component';
     MatButtonModule,
     TableModule,
     MatPaginatorModule,
+    MatChipsModule,
     RouterModule.forRoot([
     { path: '', component: MainHomeComponent, pathMatch: 'full' },
     { path: 'admin', component: AdminDashboardComponent,

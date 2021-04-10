@@ -1,4 +1,11 @@
-<mat-grid-list [cols]="breakpoint" (window:resize)="onResize($event)" rowHeight="530px" style="margin-top:60px">
+<div style="margin-top:80px">
+  <mat-chip-list class="mat-chip-list" aria-label="Product Category">
+    <mat-chip>Category 1</mat-chip>
+    <mat-chip>Category 2</mat-chip>
+  </mat-chip-list>
+</div>
+
+<mat-grid-list [cols]="breakpoint" (window:resize)="onResize($event)" rowHeight="530px" style="margin-top:30px">
   <mat-grid-tile *ngFor="let tile of prodlist">
     <mat-card>
       <mat-card-header class="cardheader">
@@ -51,3 +58,4 @@
                [pageSize]="10"
                [pageSizeOptions]="[5, 10, 25, 100]">
 </mat-paginator>
+
