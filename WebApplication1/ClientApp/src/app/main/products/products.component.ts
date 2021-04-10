@@ -13,7 +13,7 @@ import { Cartproduct } from '../../model-ts/cartproduct';
 
 export class ProductsComponent implements OnInit {
   breakpoint: number
-  Searchvalue = 'Search';
+  Searchvalue = '';
 
   constructor(public http: HttpClient, private productservice: MainService, private cart:CartService) {
     this.getproducts();

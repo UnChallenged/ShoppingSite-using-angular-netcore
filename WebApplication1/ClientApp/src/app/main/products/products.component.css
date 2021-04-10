@@ -22,3 +22,9 @@
   display:flex;
   margin-right:90px;
 }
+.actionbuttoncenter {
+  margin-bottom: -8px;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+}

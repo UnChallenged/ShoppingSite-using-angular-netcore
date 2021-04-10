@@ -5,7 +5,7 @@
   </mat-chip-list>
 </div>
 <mat-form-field class="searchfield">
-  <input matInput type="text" [(ngModel)]="Searchvalue">
+  <input matInput type="text" placeholder="Search" [(ngModel)]="Searchvalue">
   <button mat-button *ngIf="Searchvalue" matSuffix mat-icon-button aria-label="Clear" (click)="Searchvalue=''">
     <mat-icon>close</mat-icon>
   </button>
@@ -22,7 +22,7 @@
         <h6>{{"Price : "+ tile.productPrice }}</h6>
         <h6> {{"Available Quantity: "+tile.productQuantity}}</h6>
       </mat-card-content>
-      <mat-card-actions>
+      <mat-card-actions class="actionbuttoncenter">
         <button mat-button (click)="Addcart(tile)">
           <mat-icon aria-hidden="false">add</mat-icon>
           Add to cart
