@@ -1,7 +1,7 @@
 <div style="margin-top:80px">
   <mat-chip-list class="mat-chip-list" aria-label="Product Category">
-    <mat-chip>Category 1</mat-chip>
-    <mat-chip>Category 2</mat-chip>
+    <mat-chip>All</mat-chip>
+    <mat-chip *ngFor="let cat of catlist">{{cat.catName}}</mat-chip>
   </mat-chip-list>
 </div>
 <mat-form-field class="searchfield">

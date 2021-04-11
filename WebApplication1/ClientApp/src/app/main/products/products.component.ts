@@ -12,11 +12,13 @@ import { Cartproduct } from '../../model-ts/cartproduct';
 
 
 export class ProductsComponent implements OnInit {
-  breakpoint: number
+  breakpoint: number;
   Searchvalue = '';
+  public catlist = [];
 
   constructor(public http: HttpClient, private productservice: MainService, private cart:CartService) {
     this.getproducts();
+    this.getcategories();
   }
   public prodlist = [];
 
@@ -24,6 +26,15 @@ export class ProductsComponent implements OnInit {
     this.productservice.getproducts().subscribe(
       data => this.prodlist = data);
    
+  }
+  getcategories() {
+    this.productservice.getcategories().subscribe(
+      data => {
+        this.catlist = data;
+        console.log("test", this.catlist)
+    });
+      
+
   }
   ngOnInit(): void {
     if (window.innerWidth <= 700) {
