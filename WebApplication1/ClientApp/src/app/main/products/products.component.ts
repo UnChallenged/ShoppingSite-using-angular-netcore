@@ -64,4 +64,7 @@ export class ProductsComponent implements OnInit {
     }
     //this.breakpoint = (event.target.innerWidth <= 400) ? 1 : 3;
   }
+  categoryfilter(catid: any) {
+    console.log("test:" + catid);
+}
 }
