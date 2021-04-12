@@ -4,6 +4,7 @@
     <mat-chip *ngFor="let cat of catlist" (click)="categoryfilter(cat.catId)">{{cat.catName}}</mat-chip>
   </mat-chip-list>
 </div>
+
 <mat-form-field class="searchfield">
   <input matInput type="text" placeholder="Search" [(ngModel)]="Searchvalue">
   <button mat-button *ngIf="Searchvalue" matSuffix mat-icon-button aria-label="Clear" (click)="Searchvalue=''">
