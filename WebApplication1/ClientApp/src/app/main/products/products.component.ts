@@ -15,7 +15,7 @@ export class ProductsComponent implements OnInit {
   breakpoint: number;
   Searchvalue = '';
   public catlist = [];
-  selectedButton: string = this.catlist[0];
+  selectedButton: string = '';
 
   constructor(public http: HttpClient, private productservice: MainService, private cart:CartService) {
     this.getproducts();
@@ -33,7 +33,7 @@ export class ProductsComponent implements OnInit {
       data => {
         this.catlist = data;
         this.catlist.unshift({ catId:'0', catName:'All'});
-        console.log("test", this.catlist)
+        this.selectedButton=this.catlist[0];
     });
       
 
