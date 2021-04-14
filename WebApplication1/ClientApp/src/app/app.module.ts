@@ -39,7 +39,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TableModule } from 'primeng/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatChipsModule} from '@angular/material/chips';
-import {MDCChipSet} from '@material/chips';
 
 import { CartSummaryComponent } from './cart-summary/cart-summary.component';
 import { CartDetailsComponent } from './cart-details/cart-details.component';
@@ -107,7 +106,6 @@ import { FooterComponent } from './main/footer/footer.component';
     TableModule,
     MatPaginatorModule,
     MatChipsModule,
-    MDCChipSet,
     RouterModule.forRoot([
     { path: '', component: MainHomeComponent, pathMatch: 'full' },
     { path: 'admin', component: AdminDashboardComponent,

@@ -15,6 +15,7 @@ export class ProductsComponent implements OnInit {
   breakpoint: number;
   Searchvalue = '';
   public catlist = [];
+  selectedButton: string = this.catlist[0];
 
   constructor(public http: HttpClient, private productservice: MainService, private cart:CartService) {
     this.getproducts();
@@ -31,6 +32,7 @@ export class ProductsComponent implements OnInit {
     this.productservice.getcategories().subscribe(
       data => {
         this.catlist = data;
+        this.catlist.unshift({ catId:'0', catName:'All'});
         console.log("test", this.catlist)
     });
       
@@ -66,5 +68,12 @@ export class ProductsComponent implements OnInit {
   }
   categoryfilter(catid: any) {
     console.log("test:" + catid);
-}
+  }
+
+  isButtonSelected(button: string) {
+    return button === this.selectedButton;
+  }
+  switchButton(button: string) {
+    this.selectedButton = button;
+  }
 }

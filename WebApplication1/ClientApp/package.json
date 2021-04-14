@@ -23,7 +23,6 @@
     "@angular/platform-browser-dynamic": "^11.2.6",
     "@angular/platform-server": "^11.2.6",
     "@angular/router": "^11.2.6",
-    "@material/chips": "^10.0.0",
     "@nguniversal/aspnetcore-engine": "^11.2.1",
     "@nguniversal/module-map-ngfactory-loader": "8.1.1",
     "aspnet-prerendering": "^3.0.1",
