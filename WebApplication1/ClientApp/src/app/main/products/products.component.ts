@@ -33,7 +33,7 @@ export class ProductsComponent implements OnInit {
       data => {
         this.catlist = data;
         this.catlist.unshift({ catId:'0', catName:'All'});
-        this.selectedButton=this.catlist[0];
+        this.selectedButton=this.catlist[0].catId;
     });
       
 
