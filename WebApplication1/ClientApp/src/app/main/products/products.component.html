@@ -3,12 +3,12 @@
     <mat-chip *ngFor="let cat of catlist" [ngClass]="{'chipsclr':isButtonSelected(cat.catId)}" (click)="switchButton(cat.catId)">{{cat.catName}}</mat-chip>
   </mat-chip-list>
 </div>
-<mat-form-field class="searchfield">
+<div class="searchfield">
   <input pInputText type="text" placeholder="Search" [(ngModel)]="Searchvalue">
   <button mat-button *ngIf="Searchvalue" matSuffix mat-icon-button aria-label="Clear" (click)="Searchvalue=''">
     <mat-icon>close</mat-icon>
   </button>
-</mat-form-field>
+</div>
 <mat-grid-list [cols]="breakpoint" (window:resize)="onResize($event)" rowHeight="530px" style="margin-top:30px">
   <div *ngIf="(prodlist | filter:Searchvalue).length <1">
     Not Found
