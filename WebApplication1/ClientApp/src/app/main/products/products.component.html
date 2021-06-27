@@ -10,7 +10,10 @@
   </button>
 </mat-form-field>
 <mat-grid-list [cols]="breakpoint" (window:resize)="onResize($event)" rowHeight="530px" style="margin-top:30px">
-  <mat-grid-tile *ngFor="let tile of prodlist">
+  <div *ngIf="(prodlist | filter:Searchvalue).length <1">
+    Not Found
+  </div>
+  <mat-grid-tile *ngFor="let tile of (prodlist | filter:Searchvalue)as folder">
     <mat-card>
       <mat-card-header class="cardheader">
         <img src="https://drive.google.com/uc?export=view&id={{tile.productImage}}" style="width:230px;height:320px;" />

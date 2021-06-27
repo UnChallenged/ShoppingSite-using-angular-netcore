@@ -56,6 +56,7 @@ import { SingleProductComponent } from './single-product/single-product.componen
 import { SignupComponent } from './main/signup/signup.component';
 import { DialogOverviewUserinfoComponent } from './AdminComponents/dialog-overview-userinfo/dialog-overview-userinfo.component';
 import { FooterComponent } from './main/footer/footer.component';
+import { FilterPipe } from './main/products/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { FooterComponent } from './main/footer/footer.component';
     SingleProductComponent,
     SignupComponent,
     DialogOverviewUserinfoComponent,
-    FooterComponent
+    FooterComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

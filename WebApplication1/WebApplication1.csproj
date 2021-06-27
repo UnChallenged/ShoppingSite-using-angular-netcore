@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp5.0</TargetFramework>
@@ -36,6 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\main\products\filter.pipe.ts" />
     <None Remove="ClientApp\src\app\model-ts\cartproduct.ts" />
     <None Remove="ClientApp\src\app\model-ts\categories.ts" />
     <None Remove="ClientApp\src\app\model-ts\order.ts" />
@@ -53,6 +54,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\main\products\filter.pipe.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model-ts\cartproduct.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model-ts\categories.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model-ts\order.ts" />
