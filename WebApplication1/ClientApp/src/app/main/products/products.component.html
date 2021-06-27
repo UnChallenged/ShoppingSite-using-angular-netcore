@@ -4,7 +4,7 @@
   </mat-chip-list>
 </div>
 <mat-form-field class="searchfield">
-  <input matInput type="text" placeholder="Search" [(ngModel)]="Searchvalue">
+  <input pInputText type="text" placeholder="Search" [(ngModel)]="Searchvalue">
   <button mat-button *ngIf="Searchvalue" matSuffix mat-icon-button aria-label="Clear" (click)="Searchvalue=''">
     <mat-icon>close</mat-icon>
   </button>

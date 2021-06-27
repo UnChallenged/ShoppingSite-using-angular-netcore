@@ -1,7 +1,18 @@
 <p *ngIf="!orderlist"><em>Loading...</em></p>
+
 <div class="card">
-  <p-table [value]="orderlist" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
-           currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+  
+  <p-table #manageOrderTable [value]="orderlist" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+           currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]"
+           [globalFilterFields]="['orderId']">
+    <ng-template pTemplate="caption">
+      <div class="p-d-flex">
+        <span class="p-input-icon-left p-ml-auto">
+          <i class="pi pi-search"></i>
+          <input pInputText type="text" (input)="manageOrderTable.filterGlobal($event.target.value, 'contains')" placeholder="Search keyword" />
+        </span>
+      </div>
+    </ng-template>
     <ng-template pTemplate="header">
       <tr>
         <th style="width:5%">Order ID</th>
@@ -29,34 +40,34 @@
           </mat-select>
         </td>
         <mat-accordion>
-         <mat-expansion-panel>
-           <mat-expansion-panel-header>
-             <mat-panel-title>
-               Order Items
-             </mat-panel-title>
-           </mat-expansion-panel-header>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Order Items
+              </mat-panel-title>
+            </mat-expansion-panel-header>
 
 
-     <tr>
-           <th>Product</th>
-           <th>Quantity</th>
-           <th>Price</th>
-           </tr>
-       <tr *ngFor="let item of order['orderItems']">
-         <td style="width:50%;">{{ item.productName }}</td>
-         <td style="width:50%;">{{ item.quantityValue }}</td>
-         <td style="width:50%;">{{ item.productPrice }}</td>
-       </tr>
-    </mat-expansion-panel>
-    </mat-accordion>
+            <tr>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+            <tr *ngFor="let item of order['orderItems']">
+              <td style="width:50%;">{{ item.productName }}</td>
+              <td style="width:50%;">{{ item.quantityValue }}</td>
+              <td style="width:50%;">{{ item.productPrice }}</td>
+            </tr>
+          </mat-expansion-panel>
+        </mat-accordion>
       </tr>
     </ng-template>
-      <ng-template pTemplate="paginatorleft">
-        <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
-      </ng-template>
-      <ng-template pTemplate="paginatorright">
-        <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
-      </ng-template>
+    <ng-template pTemplate="paginatorleft">
+      <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+    </ng-template>
+    <ng-template pTemplate="paginatorright">
+      <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+    </ng-template>
 
   </p-table>
 </div>

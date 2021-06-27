@@ -16,6 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
+import { InputTextModule } from 'primeng/inputtext';
 
 import { AppComponent } from './app.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
@@ -83,6 +84,7 @@ import { FilterPipe } from './main/products/filter.pipe';
     DialogOverviewUserinfoComponent,
     FooterComponent,
     FilterPipe
+    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -108,6 +110,7 @@ import { FilterPipe } from './main/products/filter.pipe';
     TableModule,
     MatPaginatorModule,
     MatChipsModule,
+    InputTextModule,
     RouterModule.forRoot([
     { path: '', component: MainHomeComponent, pathMatch: 'full' },
     { path: 'admin', component: AdminDashboardComponent,
