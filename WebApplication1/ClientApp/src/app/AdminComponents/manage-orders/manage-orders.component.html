@@ -4,21 +4,21 @@
            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
     <ng-template pTemplate="header">
       <tr>
-        <th>Order ID</th>
-        <th>User</th>
-        <th>Order Date</th>
-        <th>Order Price</th>
-        <th>Order Status</th>
-        <th>Change Status</th>
-        <th>Order Items</th>
+        <th style="width:5%">Order ID</th>
+        <th style="width:6%">User</th>
+        <th style="width:10%">Order Date</th>
+        <th style="width:8%">Order Price</th>
+        <th style="width:8%">Order Status</th>
+        <th style="width:8%">Change Status</th>
+        <th style="width:20%">Order Items</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-order>
       <tr>
         <td>{{ order.orderId }}</td>
-        <td><button mat-raised-button (click)="viewuser(order.uid)">View</button></td>
+        <td><button mat-raised-button (click)="viewuser(order.uid)">Info</button></td>
         <td>{{ order.orderDate }}</td>
-        <td>{{ order.orderPrice }}</td>
+        <td>{{ order.orderPrice +"PKR"}}</td>
         <td>{{ order.orderStatus }}</td>
         <td>
           <mat-select (valueChange)="updatestatus(order.orderId,$event)">
@@ -38,14 +38,14 @@
 
 
      <tr>
-           <th>Product Name</th>
-           <th>Product Quantity</th>
-           <th>Product Price</th>
+           <th>Product</th>
+           <th>Quantity</th>
+           <th>Price</th>
            </tr>
        <tr *ngFor="let item of order['orderItems']">
-         <td>{{ item.productName }}</td>
-         <td>{{ item.quantityValue }}</td>
-         <td>{{ item.productPrice }}</td>
+         <td style="width:50%;">{{ item.productName }}</td>
+         <td style="width:50%;">{{ item.quantityValue }}</td>
+         <td style="width:50%;">{{ item.productPrice }}</td>
        </tr>
     </mat-expansion-panel>
     </mat-accordion>
