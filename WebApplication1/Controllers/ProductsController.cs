@@ -26,7 +26,23 @@ namespace WebApplication1.Controllers
         {
             return await _context.Products.ToListAsync();
         }
-
+        // GET: api/Products via category
+        [HttpGet]
+        [Route("getproductswithCat/{cat}")]
+        public async Task<ActionResult<IEnumerable<Products>>> GetProductsbyCategory(int cat)
+        {
+            if(cat>0)
+            {
+                return await _context.Products
+                    .Where(c=>c.CatId==cat)
+                    .ToListAsync();
+            }
+            else
+            {
+                return await _context.Products.ToListAsync();
+            }
+            
+        }
         //getting categories
         [Route("api/admin/addproducts/getcatlist")]
         public IEnumerable<Categories> Index()

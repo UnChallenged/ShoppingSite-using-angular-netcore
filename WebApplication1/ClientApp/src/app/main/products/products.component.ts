@@ -74,6 +74,12 @@ export class ProductsComponent implements OnInit {
     return button === this.selectedButton;
   }
   switchButton(button: string) {
+    this.getproductsbyCategory(parseInt(button));
     this.selectedButton = button;
+  }
+  getproductsbyCategory(cat:number) {
+    this.productservice.getproductsbyCategory(cat).subscribe(
+      data => this.prodlist = data);
+
   }
 }

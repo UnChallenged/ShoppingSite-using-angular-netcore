@@ -30,6 +30,9 @@ export class MainService {
   }
   getproducts(): Observable<Iproducts[]> {
     return this.http.get<Iproducts[]>(this.myAppUrl + 'api/Products/api/admin/manageproducts/getproducts');
+  }
+  getproductsbyCategory(cat:number): Observable<Iproducts[]> {
+    return this.http.get<Iproducts[]>(this.myAppUrl + 'api/Products/getproductswithCat/'+ cat);
 
   }
   deleteproduct(id): Observable<any> {
