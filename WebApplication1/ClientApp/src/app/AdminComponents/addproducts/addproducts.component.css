@@ -1,14 +1,14 @@
 .cardwidth {
-  max-width: 400px;
+  width: 800px;
 }
 .cardcontent{
-    text-align:center;
+   /* text-align:center;*/
 }
 .cardheader {
   display: flex;
   justify-content: center;
 }
-.cardcenter {
+.cardtopmargin {
   margin-top:30px;
-  margin-left:30%;
+  /*margin-left:30%;*/
 }

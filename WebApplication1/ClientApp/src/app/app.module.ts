@@ -17,6 +17,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { InputTextModule } from 'primeng/inputtext';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
@@ -111,6 +112,7 @@ import { FilterPipe } from './main/products/filter.pipe';
     MatPaginatorModule,
     MatChipsModule,
     InputTextModule,
+    FlexLayoutModule,
     RouterModule.forRoot([
     { path: '', component: MainHomeComponent, pathMatch: 'full' },
     { path: 'admin', component: AdminDashboardComponent,
