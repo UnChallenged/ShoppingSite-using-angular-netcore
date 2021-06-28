@@ -26,7 +26,9 @@ export class AddproductsComponent implements OnInit {
       productName: [''],
       productPrice: [],
       productQuantity: [],
-      productImage: [''],
+      ProdAvailable: [''],
+      ProdSize: [''],
+      ProdImage: [''],
       CatId: []
     });
   }

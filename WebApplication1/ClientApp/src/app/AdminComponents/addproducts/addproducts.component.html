@@ -28,13 +28,49 @@
             <mat-label>Product Quantity</mat-label>
             <input matInput formControlName="productQuantity">
           </mat-form-field>
-       
           <mat-form-field>
-            <mat-label>Product Image</mat-label>
-            <input matInput formControlName="productImage">
+            <mat-label>Product Availablity</mat-label>
+            <mat-select formControlName="ProdAvailable">
+              <mat-option value="Available">
+                Available
+              </mat-option>
+              <mat-option value="NotAvailable">
+                Not Available
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Product Size</mat-label>
+            <input matInput type="text" formControlName="ProdSize">
           </mat-form-field>
         </div>
-        <button mat-raised-button (click)="onsubmit()">Add</button>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <div>
+            <mat-label>Product Image</mat-label>
+            <input formControlName="ProdImage"
+                   type="file"
+                   class="form-control"
+                   accept="image/*">
+          </div>
+          <div>
+            <mat-label>Product Other Images(Multiple)</mat-label>
+            <input formControlName="ProdImage"
+                   type="file"
+                   class="form-control"
+                   multiple
+                   accept="image/*">
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <mat-form-field style="width:100%">
+            <mat-label>Product Description</mat-label>
+            <textarea matInput placeholder="Description.."></textarea>
+          </mat-form-field>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <button mat-raised-button (click)="onsubmit()">Add</button>
+        </div>
+          
       </mat-card-content>
     </form>
   </mat-card>
