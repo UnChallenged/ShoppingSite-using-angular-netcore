@@ -19,7 +19,7 @@ export class CustomerGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+    /*return true;*/
 
     if (this.userData.role == UserRole.Customer) {
       return true;

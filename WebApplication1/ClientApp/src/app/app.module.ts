@@ -125,11 +125,11 @@ import { FilterPipe } from './main/products/filter.pipe';
         ], canActivate: [AdminGuard]
     },
     {
-        path: 'user', component: UserDashboardComponent, canActivate: [CustomerGuard],
+        path: 'user', component: UserDashboardComponent,
         children: [
             { path: 'manageprofile', component: ManageprofileComponent },
             { path: 'myorders', component: MyOrdersComponent }
-        ]
+      ], canActivate: [CustomerGuard]
     },
     { path: 'products', component: ProductsComponent },
     { path: 'cart', component: CartDetailsComponent },
