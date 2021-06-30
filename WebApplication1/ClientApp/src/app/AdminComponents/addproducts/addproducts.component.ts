@@ -61,6 +61,9 @@ export class AddproductsComponent implements OnInit {
           this._router.navigate(['/admin/manageproducts']);
         })
     }
-  }
 
+  }
+  openAddCategoryDialog() {
+
+  }
 }
