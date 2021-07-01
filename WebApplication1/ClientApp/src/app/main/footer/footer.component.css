@@ -3,9 +3,9 @@ span {
   display: inline-block;
   width: 100%;
 }
-.footerclass {
+/*.footerclass {
   clear: both;
   position: relative;
-  height: 200px;
-  margin-top: -200px;
-}
+  height: 200px;*/
+  /*margin-top: -200px;*/
+/*}*/

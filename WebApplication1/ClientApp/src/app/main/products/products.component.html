@@ -1,4 +1,4 @@
-<div style="margin-top:80px">
+<div style="margin-top: 80px;">
   <mat-chip-list class="mat-chip-list" aria-label="Product Category">
     <mat-chip *ngFor="let cat of catlist" [ngClass]="{'chipsclr':isButtonSelected(cat.catId)}" (click)="switchButton(cat.catId)">{{cat.catName}}</mat-chip>
   </mat-chip-list>
