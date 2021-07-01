@@ -50,10 +50,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\app\AdminComponents\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\main\products\filter.pipe.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model-ts\cartproduct.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model-ts\categories.ts" />

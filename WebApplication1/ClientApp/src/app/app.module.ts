@@ -20,11 +20,10 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopnavbarComponent } from './main/topnavbar/topnavbar.component';
 import { MainHomeComponent } from './main/main-home/main-home.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AdminDashboardComponent } from './AdminComponents/admin-dashboard/admin-dashboard.component';
 import { AddproductsComponent } from './AdminComponents/addproducts/addproducts.component';
 import { ManageProductsComponent } from './AdminComponents/manage-products/manage-products.component';
 import { ManageOrdersComponent } from './AdminComponents/manage-orders/manage-orders.component';
@@ -44,7 +43,7 @@ import {MatChipsModule} from '@angular/material/chips';
 
 import { CartSummaryComponent } from './cart-summary/cart-summary.component';
 import { CartDetailsComponent } from './cart-details/cart-details.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './main/login/login.component';
 import { CustomerGuard } from './guards/customer.guard';
 import { AdminGuard } from './guards/admin.guard';
 import { HttpInterceptorService } from './Services/http-interceptor.service';
@@ -53,8 +52,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { CartService } from './Services/cartservice.service';
 import { DatePipe } from '@angular/common';
 import { ConfirmedComponent } from './confirmed/confirmed.component';
-import { DirectaccessService } from './guard/directaccess.service';
-import { SingleProductComponent } from './single-product/single-product.component';
+import { DirectaccessService } from './guards/directaccess.service';
+import { SingleProductComponent } from './main/single-product/single-product.component';
 import { SignupComponent } from './main/signup/signup.component';
 import { DialogOverviewUserinfoComponent } from './AdminComponents/dialog-overview-userinfo/dialog-overview-userinfo.component';
 import { FooterComponent } from './main/footer/footer.component';
@@ -63,7 +62,6 @@ import { FilterPipe } from './main/products/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    FetchDataComponent,
     TopnavbarComponent,
     MainHomeComponent,
     AdminDashboardComponent,
